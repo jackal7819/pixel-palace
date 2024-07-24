@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-[328px] md:max-w-[688px] lg:max-w-[864px] xl:max-w-[1080px] 2xl:max-w-[1200px] 3xl:max-w-[1360px] 4xl:max-w-[1600px];
+  }
+}
+
+@layer utilities {
+  /* Hide arrows from number input in WebKit browsers */
+  .number-input::-webkit-inner-spin-button,
+  .number-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Hide arrows from number input in Firefox */
+  .number-input {
+    -moz-appearance: textfield;
+  }
+}
+
+.profile {
+  scrollbar-width: auto;
+  scrollbar-color: #00b8ff #f1fbff;
+}
+
+.heroCard {
+  min-height: calc(100vh - 73px);
+
+  @media screen and (min-width: 766px) {
+    min-height: 470px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    min-height: 100%;
+  }
+}
+
+.swiper-pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px !important;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.swiper-pagination-horizontal {
+  --swiper-pagination-bottom: 40px;
+}
+
+.swiper-pagination-bullet {
+  --swiper-pagination-bullet-width: 36px;
+  --swiper-pagination-bullet-size: 36px;
+  --swiper-pagination-bullet-height: 36px;
+  --swiper-pagination-bullet-horizontal-gap: 15px;
+  opacity: 1 !important;
+  color: rgb(219, 91, 50) !important;
+  background-color: transparent !important;
+  border: 0.5px solid rgb(219, 91, 50);
+  border-radius: 24px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  margin: 0 !important;
+
+}
+
+.swiper-pagination-bullet-active {
+  background: rgb(219, 91, 50) !important;
+  color: rgb(241, 251, 255) !important;
+}
+
+.swiperMobile {
+  @media (max-width: 767.98px) {
+    margin-left: calc((100% - 328px) / 2);
+    width: calc(((100% - 328px) / 2) + 328px);
+  }
+}
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox + span {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.custom-checkbox + span::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #c3c3c3;
+  border-radius: 0.25em;
+}
+
+.custom-checkbox:checked + span::before {
+  border-color: rgb(219, 91, 50);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50% 50%;
+  background-image: url("/checkbox/checkbox.svg");
+}
+
+.label-text {
+  font-size: 16px;
+  color: rgb(241, 251, 255);
+  line-height: 100%;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+  }
+
+}
+
+.custom-checkbox:checked + span + .label-text {
+  color: rgb(219, 91, 50);
+}
+
+.firefox-scrollbar {
+  scrollbar-color: #00B8FF #ffffff;
+  scrollbar-width: thin;
+}
+
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)!important;
+  border-radius: 10px!important;
+  background-color: #fff!important;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px!important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px!important;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3)!important;
+  background-color: #00B8FF!important;
+  border: none!important;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2C374F;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #60A5FA;
+  border-radius: 50%;
+  border: 1px solid #2C374F;
+}
